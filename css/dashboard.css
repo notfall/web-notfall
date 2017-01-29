@@ -75,3 +75,13 @@ h1 {
   height: 400px;
   background-color: grey;
 }
+
+#container{
+  position: relative;
+  display: inline;
+}
+
+.overlay{
+  position: absolute;
+  margin-bottom: 50%; 
+}

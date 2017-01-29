@@ -1,38 +1,33 @@
+
 $(document).ready(function() {
-	navigator.geolocation.getCurrentPosition(function (position){
-                var lat = position.coords.latitude;
-                var long = position.coords.longitude;
-            });
-	var api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCgIHb-VjWfrR5SMuoNJnPK3CNU9UbDfkA&callback=initMap&&libraries=places"
+	
 
-	var map;
-	var service;
-	var infowindow;
+	var api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCgIHb-VjWfrR5SMuoNJnPK3CNU9UbDfkA&callback=initMap";
 
-	function initialize() {
-	  var pyrmont = new google.maps.LatLng(lat, long);
+	$("#Caregivers").on("click", function() {
+	  var scriptTag = "<div id = \"map\"></div>"
+      var initMap = "<script> function initMap() {\n alert('sup');\n \nvar bish = {lat: -25.363, lng: 131.044};\n "
+		+ "var map = new google.maps.Map(document.getElementById('map'),"+
+		" {\nzoom: 4, \ncenter: bish\n });\nvar marker = new google.maps.Marker({\nposition: bish, \nmap: map\n});}\n</script>\n";
+	  var mapApi = "<script async defer\n src=\""+ api +"\"></script>";
+	  var html = scriptTag + initMap + mapApi;
+	  $(".map-section").html(html);
 
-	  map = new google.maps.Map(document.getElementById('map'), {
-	      center: pyrmont,
-	      zoom: 15
-	    });
-
-	  var request = {
-	    location: pyrmont,
-	    radius: '500',
-	    types: ['store']
-	  };
-
-	  service = new google.maps.places.PlacesService(map);
-	  service.nearbySearch(request, callback);
-	}
-
-	function callback(results, status) {
-	  if (status == google.maps.places.PlacesServiceStatus.OK) {
-	    for (var i = 0; i < results.length; i++) {
-	      var place = results[i];
-	      createMarker(results[i]);
-	    }
-	  }
-	}
+/*<script>
+            function initMap() {
+              var uluru = {lat: -25.363, lng: 131.044};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgIHb-VjWfrR5SMuoNJnPK3CNU9UbDfkA&callback=initMap&&libraries=places">
+          </script>*/
+    });
 });
