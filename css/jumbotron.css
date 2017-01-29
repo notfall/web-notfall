@@ -3,6 +3,7 @@ body {
   padding-top: 2rem;
 }
 
-.jumbotron{
+.jumbotron .container{
+	max-height: 100%;
 	padding: 3em 10em 3em 3em;
 }
