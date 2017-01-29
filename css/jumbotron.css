@@ -4,6 +4,6 @@ body {
 }
 
 .jumbotron .container{
-	max-height: 100%;
+	max-height: 150%;
 	padding: 3em 10em 3em 3em;
 }
