@@ -13,7 +13,7 @@
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="CSS/dashboard.css" rel="stylesheet">
     <!-- Font Awesome Styles-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -52,17 +52,17 @@
       <div class="row">
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+            <li role="presentation" class="active">
+              <a href="#Overview" data-toggle="tab">Overview</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reports</a>
+            <li role="presentation">
+              <a data-toggle="tab" class="nav-link" href="#Visits">Upcoming Scheduled Visits</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Analytics</a>
+            <li role="presentation">
+              <a data-toggle="tab" class="nav-link" href="#Bills">Fees and Co-payents</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Export</a>
+            <li role="presentation">
+              <a data-toggle="tab" class="nav-link" href="#">Export</a>
             </li>
           </ul>
 

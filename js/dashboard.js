@@ -1,6 +1,27 @@
 
 $(document).ready(function() {
 	
+	$('#Overview').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+
+	$('#Visits').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+
+	$('#Bills').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+
+	$('#Export').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+
+
 
 	var api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCgIHb-VjWfrR5SMuoNJnPK3CNU9UbDfkA&callback=initMap";
 
